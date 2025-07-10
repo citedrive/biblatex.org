@@ -1,0 +1,150 @@
+---
+title: "Getting Started with BibLaTeX: A Modern Guide to Managing References in LaTeX"
+description: Learn how to use BibLaTeX in your LaTeX documents.
+---
+
+
+## What is BibLaTeX?
+
+**BibLaTeX** is a modern bibliography management package for LaTeX. It offers powerful features for citation customization, localization, sorting, and formatting—far beyond what the traditional `BibTeX` system can handle. Unlike BibTeX, BibLaTeX works seamlessly with modern engines like `biber` and gives you complete control over how your citations and bibliography appear.
+
+### Key Features of BibLaTeX
+
+* Full Unicode support via `biber`
+* Flexible citation styles (`authoryear`, `numeric`, `alphabetic`, and more)
+* Custom sorting and filtering
+* Localized strings for multilingual documents
+* Easy integration with Overleaf, TeXstudio, and other editors
+
+---
+
+## Why Use BibLaTeX Instead of BibTeX?
+
+While BibTeX is still widely used, **BibLaTeX offers far more flexibility** and better localization. If you’re writing a thesis, academic paper, or multilingual document, BibLaTeX is the better choice.
+
+| Feature                | BibTeX  | BibLaTeX            |
+| ---------------------- | ------- | ------------------- |
+| Unicode support        | ❌       | ✅                   |
+| Custom citation styles | Limited | Highly customizable |
+| Sorting/filtering      | Basic   | Advanced            |
+| Multilingual support   | Limited | Excellent           |
+| Active development     | Minimal | Ongoing             |
+
+---
+
+## Installing BibLaTeX
+
+Most modern LaTeX distributions (like **TeX Live**, **MiKTeX**, or **Overleaf**) include BibLaTeX by default. To check, simply include it in your preamble:
+
+```latex
+\usepackage[backend=biber,style=authoryear]{biblatex}
+\addbibresource{references.bib}
+```
+
+Make sure your LaTeX editor is configured to use `biber` as the backend instead of `bibtex`.
+
+---
+
+## Creating Your First `.bib` File
+
+A `.bib` file stores your references in a structured format. Here's an example entry:
+
+```bibtex
+@book{knuth1984texbook,
+  author    = {Donald E. Knuth},
+  title     = {The TeXbook},
+  year      = {1984},
+  publisher = {Addison-Wesley}
+}
+```
+
+To cite it in your document:
+
+```latex
+According to \textcite{knuth1984texbook}, TeX is powerful.
+```
+
+To print your bibliography:
+
+```latex
+\printbibliography
+```
+
+---
+
+## Choosing a Citation Style
+
+BibLaTeX supports various styles out of the box:
+
+* `numeric`
+* `authoryear`
+* `alphabetic`
+* `verbose`
+* `authortitle`
+
+You can define them in the preamble like this:
+
+```latex
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+```
+
+For academic journals, BibLaTeX is highly adaptable—you can even mimic APA, MLA, Chicago, and other formal styles with custom templates.
+
+---
+
+## Using BibLaTeX on Overleaf
+
+On **Overleaf**, using BibLaTeX is straightforward:
+
+1. Go to **Project > Settings**
+2. Set the compiler to `XeLaTeX` or `LuaLaTeX`
+3. Choose `biber` as the bibliography processor
+4. Upload your `.bib` file or connect your **CiteDrive** project (recommended!)
+
+---
+
+## 🔗 Why You Should Use **CiteDrive** with BibLaTeX
+
+**CiteDrive** is a collaborative reference manager built specifically for BibTeX and BibLaTeX users. It helps you manage your `.bib` files in the cloud—and it's made for **LaTeX** and **Overleaf** users.
+
+### What Makes CiteDrive Perfect for BibLaTeX?
+
+✅ **Real-time .bib syncing**: Your bibliography is always up to date in Overleaf
+✅ **BibLaTeX-ready**: Fields like `langid`, `type`, and `urldate` are supported
+✅ **Collaborative projects**: Share and organize references with co-authors
+✅ **Modern UI**: Easier than manually editing `.bib` files
+✅ **Browser Extension**: Save citations from Google Scholar, PubMed, ArXiv, and more
+✅ **No vendor lock-in**: Your data stays in clean, exportable BibTeX/BibLaTeX format
+
+### How to Connect CiteDrive with Overleaf
+
+1. Sign up at [citedrive.com](https://citedrive.com)
+2. Create a project and add references (or import them)
+3. Click **Share > Get Overleaf Link**
+4. Paste the link in Overleaf as your `.bib` source
+5. Done! Your BibLaTeX file will stay in sync automatically
+
+---
+
+## Troubleshooting Common BibLaTeX Issues
+
+| **Problem**                  | **Solution**                                                          |
+| ---------------------------- | --------------------------------------------------------------------- |
+| `Citation undefined`         | Check if `biber` is used as backend and `.bib` file is linked         |
+| `Missing \printbibliography` | Make sure you added `\printbibliography` at the end                   |
+| `Entry missing field`        | Some styles require fields like `year`, `author`, `title`             |
+| `File not found`             | Ensure your `.bib` file is uploaded or correctly synced via CiteDrive |
+
+---
+
+## Final Thoughts
+
+**BibLaTeX** is the future-proof way to manage bibliographies in LaTeX, and tools like **CiteDrive** make it easier than ever to get started, collaborate, and keep things organized. Whether you're writing a thesis, a journal article, or a multilingual paper, BibLaTeX gives you unmatched control over your references.
+
+---
+
+## 📥 Get Started Now
+
+* 📚 Learn more about [BibLaTeX documentation](https://ctan.org/pkg/biblatex)
+* 🔗 Sign up for [CiteDrive](https://citedrive.com) and link it to Overleaf
+* 🧠 Explore examples at [bibtex.eu](https://bibtex.eu)

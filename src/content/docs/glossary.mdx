@@ -1,0 +1,147 @@
+---
+title: "Glossary of Terms: BibLaTeX Reference Guide"
+description: Understand common BibLaTeX terms and concepts used in reference management and LaTeX documents.
+---
+
+# 📚 Glossary of Terms: BibLaTeX Reference Guide
+
+This glossary helps you understand common terms and concepts used when working with **BibLaTeX**, **BibTeX**, and reference managers like **CiteDrive**. Whether you're just getting started with LaTeX or want a deeper understanding of citation tools, this guide has you covered.
+
+---
+
+### **BibLaTeX**
+A modern bibliography package for LaTeX that provides advanced control over citation formatting. It works with `biber` as the backend processor and supports localization, custom styles, and more.
+
+---
+
+### **BibTeX**
+The original tool for managing references in LaTeX. While still widely used, BibTeX is less flexible than BibLaTeX and does not support full Unicode or modern field types.
+
+---
+
+### **Biber**
+The default backend for BibLaTeX. It reads your `.bib` file and handles advanced sorting, filtering, and localization. Must be selected in your LaTeX editor or Overleaf for BibLaTeX to function correctly.
+
+---
+
+### **`.bib` File**
+A plain text file that contains your reference entries in BibTeX or BibLaTeX format. Each entry includes a citation key, type (`@article`, `@book`, etc.), and fields like `title`, `author`, `year`.
+
+---
+
+### **Entry Type**
+The category of the source you're citing, such as:
+- `@article` for journal articles  
+- `@book` for books  
+- `@misc` for websites or miscellaneous items
+
+BibLaTeX also includes additional types like `@online`, `@software`, `@movie`, `@patent`.
+
+---
+
+### **Citation Key**
+A unique identifier (e.g., `smith2022`) used to cite an entry in your LaTeX document using `\cite{smith2022}`.
+
+---
+
+### **Field**
+Each piece of information within an entry, such as:
+- `author`
+- `title`
+- `year`
+- `url`
+- `urldate` (for BibLaTeX)
+- `langid` (language identifier for BibLaTeX)
+
+---
+
+### **Style**
+Determines how citations and bibliographies are formatted. Examples:
+- `authoryear` (e.g., Smith 2022)
+- `numeric` (e.g., [1])
+- `alphabetic` (e.g., [Smi22])
+
+BibLaTeX offers more flexibility than BibTeX in customizing styles.
+
+---
+
+### **Backend**
+Specifies the tool that processes the `.bib` file. For BibLaTeX, this is usually `biber`. For BibTeX, it is simply `bibtex`.
+
+Example in LaTeX preamble:
+```latex
+\usepackage[backend=biber,style=authoryear]{biblatex}
+````
+
+---
+
+### **CiteDrive**
+
+A cloud-based reference manager built specifically for BibTeX and BibLaTeX users. It offers:
+
+* Real-time Overleaf integration
+* Smart citation capture via browser extension
+* Clean, properly formatted `.bib` files
+* Support for BibLaTeX-specific fields and entry types
+
+---
+
+### **Overleaf**
+
+A popular online LaTeX editor. Overleaf supports both BibTeX and BibLaTeX, and integrates seamlessly with tools like CiteDrive for real-time bibliography syncing.
+
+---
+
+### **Localization**
+
+BibLaTeX supports multiple languages for bibliography elements (e.g., “accessed” → “zugegriffen am” in German). Use the `langid` field to specify the language for each entry.
+
+---
+
+### **Sorting**
+
+BibLaTeX lets you define how your references are ordered (e.g., by author, year, title). You can customize sorting rules using options like `sorting=ynt`.
+
+---
+
+### **DOI**
+
+A *Digital Object Identifier*. Often used in the `doi` field to provide a permanent link to journal articles or datasets.
+
+---
+
+### **URL / URLDate**
+
+Fields used to cite online sources:
+
+* `url` is the link to the resource
+* `urldate` is the date you accessed the source
+
+These fields are crucial when citing websites or digital publications using BibLaTeX.
+
+---
+
+### **Crossref**
+
+Used when one entry shares fields with another. For example, a `@incollection` may reference a `@book` via `crossref = {bookkey}`.
+
+---
+
+### **XData**
+
+BibLaTeX feature that allows you to define reusable sets of fields that can be shared across entries. Useful for reducing repetition in `.bib` files.
+
+---
+
+### **Bibliography Style File**
+
+Defines how references appear in the document. With BibLaTeX, the `.bst` file is replaced by the `style=` option in `\usepackage`.
+
+---
+
+## ✅ Tips for Beginners
+
+* Always choose **`biber`** as your backend for BibLaTeX.
+* Use **CiteDrive** to manage your `.bib` file and sync with Overleaf.
+* Include required fields (`author`, `title`, `year`) for each entry type.
+* For websites, don’t forget `url` and `urldate`.
